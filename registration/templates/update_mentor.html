@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>KOLEJ PROFESIONAL MARA INDERA MAHKOTA</h1> 
+   <h2>UPDATE Mentor</h2>
+
+   <form action="{%url 'save_update_mentor' data.mentorcode %}" method="post">
+
+        {% csrf_token %}
+            Mentor code : <input type="text" name="code" value="{{data.mentorcode}}" disabled="false"><br>
+            Mentor Name : <input type="text" name="name" value="{{data.mentor_name}}"><br>
+            <input type="submit" value="SAVE">
+   </form>
+  
+   <br><br>
+   <a href="{% url 'index' %}">Back to HomePage</a>
+</body>
+</html>
